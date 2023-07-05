@@ -42,8 +42,13 @@ const verifyJWT = (req, res, next) => {
 }
 
 // get all the products
-app.get('/products', (req, res) => {
+app.get('/products', verifyJWT, (req, res) => {
     res.send(products)
+})
+
+// get all the users
+app.get('/users', (req, res) => {
+    res.send(users)
 })
 
 
