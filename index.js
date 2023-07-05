@@ -2,6 +2,8 @@ const express = require('express')
 const cors = require('cors')
 require('dotenv').config();
 const jwt = require('jsonwebtoken');
+const products = require('./data/products.json')
+const users = require('./data/user.json')
 const app = express()
 const port = 5000
 
@@ -21,6 +23,29 @@ app.get('/jwt', (req, res) => {
     const token = jwt.sign({ phone: '0190000' },process.env.ACCESS_TOKEN, { expiresIn: '1h'});
     res.send({token})
 })
+
+// this middleware verify our token
+const verifyJWT = (req, res, next) => {
+    console.log('ping verifyjwt');
+    const authorization = req.headers.authorization
+    if(!authorization){
+        return res.status(401).send({error: true, message: 'unauthorized access!'})
+    }
+    const token = authorization.split(' ')[1]
+    jwt.verify(token, process.env.ACCESS_TOKEN, (err, decoded) => {
+        if(err){
+            return res.status(403).send({error: true, message: 'unauthorized access!'})
+        }
+        req.decoded = decoded
+        next();
+    })
+}
+
+// get all the products
+app.get('/products', (req, res) => {
+    res.send(products)
+})
+
 
 app.listen(port, () => {
   console.log(`Practical app listening on port ${port}`)

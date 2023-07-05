@@ -1,0 +1,19 @@
+[
+    {
+      "id": 1,
+      "name": "Mehedi Hasan Emon",
+      "phoneNumber": "01910904227",
+      "user-type": "user",
+      "password": "emon1234",
+      "img": "https://i.ibb.co/9T2XqZ3/user-1.png"
+    },
+    {
+      "id": 2,
+      "name": "Admin",
+      "phoneNumber": "01900000000",
+      "user-type": "admin",
+      "password": "emon1234",
+      "img": "https://i.ibb.co/9T2XqZ3/user-1.png"
+    }
+  ]
+  
