@@ -1,19 +1,42 @@
 [
-    {
-      "id": 1,
-      "name": "Mehedi Hasan Emon",
-      "phoneNumber": "01910904227",
-      "user-type": "user",
-      "password": "emon1234",
-      "img": "https://i.ibb.co/9T2XqZ3/user-1.png"
-    },
-    {
-      "id": 2,
-      "name": "Admin",
-      "phoneNumber": "01900000000",
-      "user-type": "admin",
-      "password": "emon1234",
-      "img": "https://i.ibb.co/9T2XqZ3/user-1.png"
-    }
-  ]
-  
+  {
+    "id": 1,
+    "name": "Mehedi Hasan Emon",
+    "phoneNumber": "01910904227",
+    "userType": "user",
+    "password": "emon1234",
+    "img": "https://i.ibb.co/9T2XqZ3/user-1.png"
+  },
+  {
+    "id": 2,
+    "name": "Admin",
+    "phoneNumber": "01900000000",
+    "userType": "admin",
+    "password": "emon1234",
+    "img": "https://i.ibb.co/9T2XqZ3/user-1.png"
+  },
+  {
+    "id": 3,
+    "name": "John Doe",
+    "phoneNumber": "0123456789",
+    "userType": "user",
+    "password": "password123",
+    "img": "https://i.ibb.co/9T2XqZ3/user-1.png"
+  },
+  {
+    "id": 4,
+    "name": "Jane Smith",
+    "phoneNumber": "0987654321",
+    "userType": "user",
+    "password": "qwerty123",
+    "img": "https://i.ibb.co/9T2XqZ3/user-1.png"
+  },
+  {
+    "id": 5,
+    "name": "Michael Johnson",
+    "phoneNumber": "0765432109",
+    "userType": "user",
+    "password": "abc123",
+    "img": "https://i.ibb.co/9T2XqZ3/user-1.png"
+  }
+]

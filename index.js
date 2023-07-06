@@ -26,7 +26,7 @@ app.get('/jwt', (req, res) => {
 
 // this middleware verify our token
 const verifyJWT = (req, res, next) => {
-    console.log('ping verifyjwt');
+    // console.log('ping verifyjwt');
     const authorization = req.headers.authorization
     if(!authorization){
         return res.status(401).send({error: true, message: 'unauthorized access!'})
@@ -43,8 +43,14 @@ const verifyJWT = (req, res, next) => {
 
 // get all the products
 app.get('/products', verifyJWT, (req, res) => {
+    // console.log('ping products');
     res.send(products)
 })
+
+// get products without jwt token
+app.get('/productswithouttoken', (req, res) => {
+    res.send(products)
+  })
 
 // get all the users
 app.get('/users', (req, res) => {
